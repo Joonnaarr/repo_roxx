@@ -1,0 +1,29 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: frontend:latest
+    ports:
+      - "3000:3000"
+  products:
+    build:
+      context: ./products
+      dockerfile: Dockerfile
+    image: products:latest
+    ports:
+      - "3001:3001"
+  shopping-cart:
+    build:
+      context: ./shopping-cart
+      dockerfile: Dockerfile
+    image: shopping-cart:latest
+    ports:
+      - "3002:3002"
+  merchandise:
+    build:
+      context: ./merchandise
+      dockerfile: Dockerfile
+    image: merchandise:latest
+    ports:
+      - "3003:3003"
